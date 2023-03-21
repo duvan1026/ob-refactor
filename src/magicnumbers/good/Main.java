@@ -2,6 +2,12 @@ package magicnumbers.good;
 
 public class Main {
 
+    private static final double PRECIO_MINIMO_COMPRA = 100; // Manejo de variable constante
+    private static final double PRECIO_ENVIO = 4.99;
+    private static final double ENVIO_GRATIS = 0;
+    private static final double DESCUENTO = 0.1;
+
+
     public static void main(String[] args){
 
         double price = 129.99;
@@ -12,11 +18,13 @@ public class Main {
     }
 
     private static double calculateShipping(double price){
-        return price < 100 ? 4.99 : 0; // hard coded
+
+        return price < PRECIO_MINIMO_COMPRA ? PRECIO_ENVIO : ENVIO_GRATIS; // hard coded
     }
 
     private static double calculateDiscount(double price){
-        return  price * 0.1;
+
+        return  price * DESCUENTO;
     }
 
 
