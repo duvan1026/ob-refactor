@@ -17,15 +17,9 @@ public class Product {
 
     public double calculatePrice(){
 
-        double result = 0;
-        double priceQuantity = this.price * this.quantity;
-        double priceDiscount = this.price * this.discount;
-        double priceShipping = shipping * 0.50;
+    ProductPriceCalculator calculator = new ProductPriceCalculator(this);
+    return calculator.calculatePrice();
 
-        // ........
-
-        // ........
-        return result;
     }
 
     // getter y setter
