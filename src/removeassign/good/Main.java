@@ -1,8 +1,10 @@
-package removeassign.bad;
+package removeassign.good;
+
+import removeassign.bad.Order;
 
 public class Main {
 
-    double calculateDiscount( Order order, double totalPrice ){
+    double calculateDiscount(Order order, double totalPrice ){
 
         if(order == null || order.getPrice()  == null) // programación defensiva
             return totalPrice;
