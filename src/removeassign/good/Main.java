@@ -1,17 +1,19 @@
 package removeassign.good;
 
-import removeassign.bad.Order;
+import extractvariable.bad.Order;
 
 public class Main {
 
     double calculateDiscount(Order order, double totalPrice ){
 
+        double result = totalPrice;
+
         if(order == null || order.getPrice()  == null) // programación defensiva
-            return totalPrice;
+            return result;
 
-        if( order.getPrice > 100 )
-            totalPrice += order.getPrice() * order.getOffer(); // sobreescribe totalPrice
+        if( order.getPrice() > 100 )
+            result += order.getPrice() * order.getOfter(); // sobreescribe totalPrice
 
-        return totalPrice;
+        return result;
     }
 }
