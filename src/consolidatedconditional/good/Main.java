@@ -12,23 +12,24 @@ public class Main {
 
         double result = 0;
 
-        if(seniority<1){
-            return 0;
+        if(!isEligibleExtraSalary()){
+            return result;
         }
-        if(education<1){
-            return 0;
-        }
-        if(incidents > 10){
-            return 0;
-        }
-        if(!certification){
-            return 0;
-        }
-
         // Calculate extra salary:
+
+
         // ....
         return result;
 
+    }
+
+    public boolean isEligibleExtraSalary(){
+
+        // agrupar condiciones utilizando And (&&) y OR (||)
+        boolean estudios = seniority<1 || education<1;
+        boolean antiguedad = incidents > 10 && !certification;
+
+        return estudios || antiguedad;
     }
 
 
