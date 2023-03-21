@@ -15,11 +15,12 @@ public class Main {
 
         if(isEligibleExtraSalary()){
             result = 500;
-            sendMessagge(); // metodo que se repite en la condicion
         }else{
             result = 0;
-            sendMessagge(); // metodo que se repite en la condicion
         }
+
+        sendMessagge(); // metodo que se repite en la condicion
+
         return result;
     }
     
