@@ -5,9 +5,9 @@ public class ProductPriceCalculator {
     private double price;
     private int quantity;
 
-    public ProductPriceCalculator(double price, int quantity) {
-        this.price = price;
-        this.quantity = quantity;
+    public ProductPriceCalculator(Product product) {
+        this.price = product.getPrice();
+        this.quantity = product.getQuantity();
     }
 
 
